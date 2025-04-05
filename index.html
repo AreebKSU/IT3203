@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Technology Info</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+
     <style>
+        /* General body styling */
         body {
-            background-image: url('https://www.usnews.com/object/image/00000186-7a58-d975-aff7-fffbc8910000/iguazu-falls-stock.jpg?update-time=1677089883729&size=responsive970'); /* background */
-            background-size: cover; /* To cover the full screen */
+            background-image: url('https://www.usnews.com/object/image/00000186-7a58-d975-aff7-fffbc8910000/iguazu-falls-stock.jpg?update-time=1677089883729&size=responsive970');
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: white; /* To make the txt readable */
-            text-align: center; /* Center text */
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
+
+        /* Navigation bar styling */
         nav {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
             display: inline-block;
             border-radius: 10px;
+            margin-top: 20px;
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px;
-            display: inline-block;
+            padding: 10px 15px;
+            font-weight: bold;
         }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content container */
         .container {
-            background: rgba(255, 255, 255, 0.8); /* Light background for ease to read etc */
-            padding: 20px;
-            width: 50%;
-            margin: auto;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            width: 60%;
+            margin: 40px auto;
+            border-radius: 12px;
             color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
+
+        /* Footer styling */
         footer {
-            margin-top: 20px;
+            margin-top: 40px;
             font-size: 14px;
+            color: white;
         }
     </style>
 </head>
+
 <body> 
 
     <header>
@@ -56,15 +76,13 @@
     </nav>
 
     <div class="container">
-        <h2>Welcome to my site!</h2>
-        <p>This website provides some of the articles I wrote in my Web Dev course here at KSU!</p>
+        <h2>Welcome to My Site!</h2>
+        <p>This website showcases some of the articles I wrote in my Web Development course at KSU.</p>
     </div>
 
     <footer>
-        <p>&copy; Syed Ibraheem. All Rights Reserved. </p><center>
+        <p>&copy; Syed Ibraheem. All rights reserved.</p>
     </footer>
 
 </body>
 </html>
-
-
