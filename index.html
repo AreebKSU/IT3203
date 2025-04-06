@@ -6,125 +6,97 @@
     <title>Web Technology Info</title>
     <link rel="stylesheet" href="styles.css" />
 
-    <style>
+    /* styles.css */
+
 body {
-            background-color: #f2f7ff;
-            font-family: Arial, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
 
-        header {
-            padding: 20px;
-            background-color: #004080;
-            color: white;
-        }
-
-        nav {
-            background-color: #003366;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        body {
-            background-image: url('https://www.usnews.com/object/image/00000186-7a58-d975-aff7-fffbc8910000/iguazu-falls-stock.jpg?update-time=1677089883729&size=responsive970');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Navigation bar styling */
-        nav {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            display: inline-block;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        nav a {
-    background-color: #333333;
+header {
+    background-color: #002244;
     color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    background-color: #444;
+    color: white;
+    padding: 10px 18px;
     text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
     font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #555555;
-    text-decoration: none;
+    background-color: #222;
 }
 
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
 
-        /* Content container */
-        .container {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 30px;
-            width: 60%;
-            margin: 40px auto;
-            border-radius: 12px;
-            color: black;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #002244;
+}
 
-        /* Footer styling */
-        footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: white;
-        }
-        /* checking hyporthesis */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
+.container p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
 
-        .container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+ul {
+    padding-left: 20px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+ul li {
+    margin-bottom: 10px;
+}
 
-        ul li {
-            margin-bottom: 10px;
-        }
+ul li a {
+    background-color: #444;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
 
-        ul li a {
-            color: #0066cc;
-            text-decoration: none;
-        }
+ul li a:hover {
+    background-color: #222;
+}
 
-        ul li a:hover {
-            text-decoration: underline;
-        }
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #002244;
+    color: white;
+    margin-top: 50px;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+}
 
-        footer {
-            margin-top: 40px;
-            padding: 10px;
-            font-size: 14px;
-            background-color: #004080;
-            color: white;
-        }
-    </style>
 </head>
 
 <body> 
