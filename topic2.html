@@ -6,28 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Topic 2: HTML and CSS in W3.CSS Templates</title>
     <link rel="stylesheet" href="styles.css" />
-    <style>
+<style>
         body {
-            background-color: lightgreen;
+            background-color: #f2f7ff;
             font-family: Arial, sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
-            color: #000;
             text-align: center;
         }
 
+        header {
+            padding: 20px;
+            background-color: #004080;
+            color: white;
+        }
+
         nav {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 10px 20px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 20px;
+            background-color: #003366;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 15px;
             font-weight: bold;
         }
 
@@ -36,21 +41,45 @@
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
             margin: 40px auto;
             padding: 30px;
-            width: 70%;
-            border-radius: 12px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
         }
 
         footer {
-            margin: 40px 0;
+            margin-top: 40px;
+            padding: 10px;
             font-size: 14px;
-            color: #333;
+            background-color: #004080;
+            color: white;
         }
-    </style>
+ </style>
 </head>
 
 <body>
