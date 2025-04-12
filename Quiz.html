@@ -80,6 +80,105 @@
             color: white;
         }
     </style>
+    <body>
+
+  <header>
+    <h1>Quiz: The Web & HTML/CSS</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="topic1.html">Topic 1</a>
+    <a href="topic2.html">Topic 2</a>
+    <a href="topic3.html">Topic 3</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="references.html">References</a>
+  </nav>
+
+  <div class="container">
+    <form id="quizForm">
+      <h2>1. What was the main purpose of the early version of the World Wide Web (Web 1.0)?</h2>
+      <label><input type="radio" name="q1" value="Sharing scientific information" /> Sharing scientific information</label><br/>
+      <label><input type="radio" name="q1" value="Streaming videos" /> Streaming videos</label><br/>
+      <label><input type="radio" name="q1" value="Online shopping" /> Online shopping</label><br/>
+
+      <h2>2. What did HTML5 introduce that made multimedia easier to use?</h2>
+      <label><input type="radio" name="q2" value="Video/audio support without plugins" /> Video/audio support without plugins</label><br/>
+      <label><input type="radio" name="q2" value="Browser-based gaming" /> Browser-based gaming</label><br/>
+      <label><input type="radio" name="q2" value="Voice control" /> Voice control</label><br/>
+
+      <h2>3. Which tag was mentioned as frequently used but could be replaced by more semantic HTML elements?</h2>
+      <label><input type="radio" name="q3" value="div" /> &lt;div&gt;</label><br/>
+      <label><input type="radio" name="q3" value="footer" /> &lt;footer&gt;</label><br/>
+      <label><input type="radio" name="q3" value="nav" /> &lt;nav&gt;</label><br/>
+
+      <h2>4. Fill in the blank: The W3.CSS grid system helps make websites _____ to different screen sizes.</h2>
+      <input type="text" name="q4" placeholder="Your answer here" /><br/>
+
+      <h2>5. Which of the following are features or advantages of HTML5 and W3.CSS? (Select all that apply)</h2>
+      <label><input type="checkbox" name="q5" value="Responsive design" /> Responsive design</label><br/>
+      <label><input type="checkbox" name="q5" value="Local storage support" /> Local storage support</label><br/>
+      <label><input type="checkbox" name="q5" value="Heavy reliance on inline styles" /> Heavy reliance on inline styles</label><br/>
+      <label><input type="checkbox" name="q5" value="Geolocation API" /> Geolocation API</label><br/>
+
+      <br/>
+      <button type="button" onclick="gradeQuiz()">Submit Quiz</button>
+      <button type="reset">Restart</button>
+    </form>
+
+    <div id="results" class="result" style="display: none;"></div>
+  </div>
+
+  <script>
+    function gradeQuiz() {
+      const form = document.forms['quizForm'];
+      let score = 0;
+      const results = [];
+
+      // Question 1
+      const q1 = form.q1.value;
+      if (q1 === "Sharing scientific information") score++;
+      results.push(`Q1: Your answer was "${q1}" – ${q1 === "Sharing scientific information" ? "Correct ✅" : "Incorrect ❌"}`);
+
+      // Question 2
+      const q2 = form.q2.value;
+      if (q2 === "Video/audio support without plugins") score++;
+      results.push(`Q2: Your answer was "${q2}" – ${q2 === "Video/audio support without plugins" ? "Correct ✅" : "Incorrect ❌"}`);
+
+      // Question 3
+      const q3 = form.q3.value;
+      if (q3 === "div") score++;
+      results.push(`Q3: Your answer was "${q3}" – ${q3 === "div" ? "Correct ✅" : "Incorrect ❌"}`);
+
+      // Question 4
+      const q4 = form.q4.value.trim().toLowerCase();
+      if (q4 === "responsive" || q4 === "adaptable") score++;
+      results.push(`Q4: Your answer was "${q4}" – ${(q4 === "responsive" || q4 === "adaptable") ? "Correct ✅" : "Incorrect ❌"}`);
+
+      // Question 5 (multi-answer)
+      const q5 = [...form.q5].filter(cb => cb.checked).map(cb => cb.value);
+      const correctAnswers = ["Responsive design", "Local storage support", "Geolocation API"];
+      const isCorrect = q5.length === 3 && q5.every(val => correctAnswers.includes(val));
+      if (isCorrect) score++;
+      results.push(`Q5: You selected ${q5.join(", ")} – ${isCorrect ? "Correct ✅" : "Incorrect ❌"}`);
+
+      // Final score display
+      const pass = score >= 4 ? "🎉 Passed!" : "❌ Failed. Try Again!";
+      const resultBox = document.getElementById("results");
+      resultBox.style.display = "block";
+      resultBox.innerHTML = `
+        <h3>Your Score: ${score} / 5</h3>
+        <ul>${results.map(r => `<li>${r}</li>`).join("")}</ul>
+        <strong>${pass}</strong>
+      `;
+    }
+  </script>
+
+  <footer>
+    <p>&copy; Syed Ibraheem. All rights reserved.</p>
+  </footer>
+
+</body>
 </head>
 <body>
 
