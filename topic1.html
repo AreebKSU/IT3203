@@ -84,6 +84,61 @@ nav a:hover {
             background-color: #004080;
             color: white;
         }
+       /* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+/* Small screens (Phones) */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .title-box {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
     </style>
     <body>
 
