@@ -6,52 +6,38 @@
     <title>Web Technology Info</title>
     <link rel="stylesheet" href="styles.css" />
 
-   <style>
+<style>
+/* Base styles */
 body {
-            background-color: #f2f7ff;
-            font-family: Arial, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+    background-color: #f2f7ff;
+    background-image: url('https://www.usnews.com/object/image/00000186-7a58-d975-aff7-fffbc8910000/iguazu-falls-stock.jpg?update-time=1677089883729&size=responsive970');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-        header {
-            padding: 20px;
-            background-color: #004080;
-            color: white;
-        }
+header {
+    padding: 20px;
+    background-color: #004080;
+    color: white;
+}
 
-        nav {
-            background-color: ##0000FF;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        body {
-            background-image: url('https://www.usnews.com/object/image/00000186-7a58-d975-aff7-fffbc8910000/iguazu-falls-stock.jpg?update-time=1677089883729&size=responsive970');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 
-        /* Navigation bar styling */
-        nav {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            display: inline-block;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-         nav a {
+nav a {
     background-color: #004080;
     color: white;
     text-decoration: none;
@@ -66,61 +52,100 @@ nav a:hover {
     text-decoration: none;
 }
 
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    max-width: 800px;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 12px;
+    color: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
 
-        /* Content container */
-        .container {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 30px;
-            width: 60%;
-            margin: 40px auto;
-            border-radius: 12px;
-            color: black;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
+ul {
+    padding-left: 20px;
+}
 
-        /* Footer styling */
-        footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: white;
-        }
-        /* checking hyporthesis */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
+ul li {
+    margin-bottom: 10px;
+}
 
+ul li a {
+    color: #0066cc;
+    text-decoration: none;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+ul li a:hover {
+    text-decoration: underline;
+}
 
-        ul li {
-            margin-bottom: 10px;
-        }
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #004080;
+    color: white;
+}
 
-        ul li a {
-            color: #0066cc;
-            text-decoration: none;
-        }
+/* MEDIA QUERIES */
 
-        ul li a:hover {
-            text-decoration: underline;
-        }
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
 
-        footer {
-            margin-top: 40px;
-            padding: 10px;
-            font-size: 14px;
-            background-color: #004080;
-            color: white;
-        }
-    </style>
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+/* Small screens (Phones) */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .title-box {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+</style>
 
 </head>
 
